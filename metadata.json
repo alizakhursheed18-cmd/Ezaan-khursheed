@@ -1,0 +1,6 @@
+{
+  "name": "Meerut Kabab",
+  "description": "Authentic Pakistani BBQ, Kababs, Grill, and traditional flavors from Karachi. Enjoy fresh charcoal-grilled kababs, tikkas, and biryani.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
