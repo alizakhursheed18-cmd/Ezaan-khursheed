@@ -9,7 +9,7 @@ export default function Menu() {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [showSpicyOnly, setShowSpicyOnly] = useState<boolean>(false);
 
-  const categories = ['All', 'BBQ Specials', 'Grilled Specials'];
+  const categories = ['All', 'BBQ Specials', 'Grilled Specials', 'Rolls'];
 
   // Filtered menu items
   const filteredItems = useMemo(() => {

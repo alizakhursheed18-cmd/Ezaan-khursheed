@@ -3,7 +3,7 @@ export interface MenuItem {
   name: string;
   description: string;
   price: number; // in PKR (Rs.)
-  category: 'BBQ Specials' | 'Grilled Specials' | 'Rice' | 'Bread' | 'Drinks';
+  category: 'BBQ Specials' | 'Grilled Specials' | 'Rice' | 'Bread' | 'Drinks' | 'Rolls';
   image: string;
   isSpicy?: boolean;
   isPopular?: boolean;

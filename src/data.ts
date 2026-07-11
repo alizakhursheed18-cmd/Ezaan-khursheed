@@ -49,6 +49,41 @@ export const MENU_ITEMS: MenuItem[] = [
     category: 'BBQ Specials',
     image: 'https://images.unsplash.com/photo-1628294896516-3441be614788?auto=format&fit=crop&q=80&w=800'
   },
+  {
+    id: 'bbq-7',
+    name: 'Zafrani Boti Boti',
+    description: 'Aromatic, saffron-infused tender chicken skewers prepared with premium cream, cardamoms, and real saffron for a royal flavor.',
+    price: 450,
+    category: 'BBQ Specials',
+    image: 'https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&q=80&w=800',
+    isPopular: true
+  },
+  {
+    id: 'bbq-8',
+    name: 'Gola Kabab',
+    description: 'Super soft, melt-in-the-mouth circular beef kababs seasoned with nutmeg, mace, and local spices, smoked to perfection.',
+    price: 400,
+    category: 'BBQ Specials',
+    image: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=800',
+    isSpicy: true
+  },
+  {
+    id: 'bbq-9',
+    name: 'Chicken Malai',
+    description: 'Single serving of ultra-creamy grilled chicken breast boti, tenderly prepared over charcoal with mild green spices.',
+    price: 200,
+    category: 'BBQ Specials',
+    image: 'https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'bbq-10',
+    name: 'Bihari Tikka',
+    description: 'Extremely tender, spicy beef or chicken strips marinated in rich mustard oil, raw papaya, and high-heat Bihari red spices.',
+    price: 380,
+    category: 'BBQ Specials',
+    image: 'https://images.unsplash.com/photo-1532636875304-0c8fe119ff91?auto=format&fit=crop&q=80&w=800',
+    isSpicy: true
+  },
 
   // Grilled Specials
   {
@@ -67,6 +102,66 @@ export const MENU_ITEMS: MenuItem[] = [
     price: 370,
     category: 'Grilled Specials',
     image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&q=80&w=800'
+  },
+
+  // Rolls Specials
+  {
+    id: 'roll-1',
+    name: 'Chicken Roll',
+    description: 'Juicy charcoal-grilled chicken boti wrapped in a crispy golden paratha with sliced onions and tangy green chutney.',
+    price: 150,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f0f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'roll-2',
+    name: 'Chicken Mayo Roll',
+    description: 'Smokey chicken chunks layered with rich garlic mayo sauce, rolled snug in a freshly fried hot paratha.',
+    price: 160,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1625182630526-8c9306b23456?auto=format&fit=crop&q=80&w=800',
+    isPopular: true
+  },
+  {
+    id: 'roll-3',
+    name: 'Chicken Malai Roll',
+    description: 'Tender Malai Boti pieces rolled with dynamic green chutney, fresh cream, and onions in a golden fried paratha.',
+    price: 170,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'roll-4',
+    name: 'Beef Roll',
+    description: 'Authentic grilled beef seekh kabab pieces wrapped in hot fried paratha with Karachi-style spiced chutney.',
+    price: 170,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'roll-5',
+    name: 'Beef Mayo Roll',
+    description: 'Tender grilled beef pieces combined with rich garlic mayo and freshly cut onions, wrapped in a crispy paratha.',
+    price: 200,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1626700051175-6518c4793f0f?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'roll-6',
+    name: 'Zinger Roll',
+    description: 'Crispy deep-fried golden chicken breast strip topped with mayo and crisp lettuce, wrapped in a warm soft paratha.',
+    price: 250,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&q=80&w=800',
+    isPopular: true
+  },
+  {
+    id: 'roll-7',
+    name: 'Kabab Roll',
+    description: 'Sizzling beef seekh kabab wrapped inside a hot crispy paratha with spicy house-made mint-coriander yogurt chutney.',
+    price: 150,
+    category: 'Rolls',
+    image: 'https://images.unsplash.com/photo-1625182630526-8c9306b23456?auto=format&fit=crop&q=80&w=800'
   }
 ];
 
