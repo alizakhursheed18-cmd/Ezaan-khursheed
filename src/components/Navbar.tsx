@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Flame, Phone } from 'lucide-react';
+import { Menu, X, Flame, Phone, QrCode } from 'lucide-react';
 
-export default function Navbar() {
+interface NavbarProps {
+  onOpenQR: () => void;
+}
+
+export default function Navbar({ onOpenQR }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -113,7 +117,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA Action Button */}
-          <div className="hidden sm:flex items-center space-x-4">
+          <div className="hidden sm:flex items-center space-x-3">
             <a
               id="cta-nav-phone"
               href="tel:+923110362673"
@@ -122,6 +126,14 @@ export default function Navbar() {
               <Phone className="w-4 h-4 text-orange-500" />
               <span>+92 311 0362673</span>
             </a>
+            <button
+              id="nav-qr-btn"
+              onClick={onOpenQR}
+              className="p-2.5 bg-stone-900 hover:bg-stone-800 text-amber-500 hover:text-white rounded-xl border border-stone-800 hover:border-orange-500/30 transition-all duration-300 cursor-pointer flex items-center justify-center"
+              title="Get Menu QR Code"
+            >
+              <QrCode className="w-4.5 h-4.5" />
+            </button>
             <button
               id="cta-nav-order"
               onClick={() => scrollToSection('menu')}
@@ -181,6 +193,17 @@ export default function Navbar() {
                   <Phone className="w-5 h-5 text-orange-500" />
                   <span className="font-medium">+92 311 0362673</span>
                 </a>
+                <button
+                  id="mobile-cta-qr"
+                  onClick={() => {
+                    setIsOpen(false);
+                    onOpenQR();
+                  }}
+                  className="w-full flex items-center justify-center space-x-2 py-3 bg-stone-900 hover:bg-stone-800 text-amber-500 font-semibold rounded-xl border border-stone-800 cursor-pointer"
+                >
+                  <QrCode className="w-5 h-5" />
+                  <span>Get Menu QR Code</span>
+                </button>
                 <button
                   id="mobile-cta-order"
                   onClick={() => scrollToSection('menu')}

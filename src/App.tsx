@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
@@ -8,12 +10,15 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import QRCodeModal from './components/QRCodeModal';
 
 export default function App() {
+  const [isQRModalOpen, setIsQRModalOpen] = useState(false);
+
   return (
     <div id="meerut-kabab-app" className="min-h-screen bg-stone-950 font-sans text-stone-200 antialiased overflow-x-hidden selection:bg-orange-600 selection:text-white">
       {/* Sticky Navigation Hub */}
-      <Navbar />
+      <Navbar onOpenQR={() => setIsQRModalOpen(true)} />
 
       {/* Main Single Page Content Sections */}
       <main id="main-content-flow">
@@ -45,7 +50,14 @@ export default function App() {
       <Footer />
 
       {/* Float Stack (WhatsApp, Direct Call, Scroll Up) */}
-      <FloatingActions />
+      <FloatingActions onOpenQR={() => setIsQRModalOpen(true)} />
+
+      {/* Interactive QR Menu Modal */}
+      <AnimatePresence>
+        {isQRModalOpen && (
+          <QRCodeModal isOpen={isQRModalOpen} onClose={() => setIsQRModalOpen(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

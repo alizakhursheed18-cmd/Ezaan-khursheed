@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Phone, ArrowUp, MessageCircle } from 'lucide-react';
+import { Phone, ArrowUp, MessageCircle, QrCode } from 'lucide-react';
 
-export default function FloatingActions() {
+interface FloatingActionsProps {
+  onOpenQR: () => void;
+}
+
+export default function FloatingActions({ onOpenQR }: FloatingActionsProps) {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -40,6 +44,19 @@ export default function FloatingActions() {
           </motion.button>
         )}
       </AnimatePresence>
+
+      {/* Floating QR Code Button */}
+      <motion.button
+        id="floating-qr-action"
+        onClick={onOpenQR}
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.15 }}
+        className="p-3.5 bg-stone-900 hover:bg-orange-600 text-amber-500 hover:text-white rounded-2xl border border-stone-800 hover:border-orange-500 shadow-2xl hover:-translate-y-1 active:translate-y-0 transition-all flex items-center justify-center cursor-pointer group"
+        title="Get Menu QR Code"
+      >
+        <QrCode className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+      </motion.button>
 
       {/* Floating Call Button */}
       <motion.a
